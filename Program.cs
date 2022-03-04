@@ -29,7 +29,6 @@ namespace Employee
         private double userRating;
         private int noOfService=0;
         private const double chargePerService = 500;
-
         public Laborer(string name, string address,double userRating,int noOfService) :base("PL-00"+id++,name,address)
         {
             this.userRating = userRating;
@@ -59,8 +58,7 @@ namespace Employee
             return 0;
         }
         public override void ShowInfo()
-        {
-            
+        { 
             base.ShowInfo();
             Console.WriteLine("Bonus Eligable: " + EmployeeStatus(this));
             Console.WriteLine("User Rating: " + userRating);
@@ -72,7 +70,6 @@ namespace Employee
     {
         private static int id = 1;
         private double yearsOfExperience;
-
         public Manager(string name, string address,double yearsOfExperience) : base("PM-0"+id++, name, address)
         {
             this.yearsOfExperience = yearsOfExperience;
@@ -130,11 +127,9 @@ namespace Employee
                     {
                         l.ShowInfo();
                     }
-                }
-                
+                }    
             }
         }
-
     }
     class Program
     {
